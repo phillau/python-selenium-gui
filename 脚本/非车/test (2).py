@@ -5,11 +5,10 @@ try:
     driver.implicitly_wait(10)
     url = readByRowName(path, sheet_name, "url")
     driver.get(url)
+    driver.find_element_by_id("kw").send_keys("自动化测试")
     sleep(3)
-    driver.find_element_by_class_name("immediate-offer").click()
-    driver.switch_to.frame("showIframecarIndexNew")
-    driver.find_element_by_id("citynameS").click()
-    driver.switch_to.frame("overPageIframe")
+    driver.find_element_by_id("su").click()
+    sleep(10)
 except:
     raise RuntimeError(traceback)
 finally:
